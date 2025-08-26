@@ -1,0 +1,40 @@
+{
+	"name": "filterActivity",
+	"properties": {
+		"activities": [
+			{
+				"name": "Filter1",
+				"type": "Filter",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.ArrayOfFilter",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@greater(item(),3)",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"ArrayOfFilter": {
+				"type": "array",
+				"defaultValue": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7
+				]
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-08-14T02:44:47Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

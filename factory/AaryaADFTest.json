@@ -1,0 +1,9 @@
+{
+	"name": "AaryaADFTest",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6a387901-9017-4867-ab6c-02f143b5b05c",
+		"tenantId": "77d57a84-9153-4d3f-a67d-7344a0490c31"
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"name": "MySqlParameterized",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"serverName": {
+				"type": "string"
+			},
+			"dbName": {
+				"type": "string"
+			},
+			"userName": {
+				"type": "string"
+			},
+			"password": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "MySql",
+		"typeProperties": {
+			"server": "@{linkedService().serverName}",
+			"port": 3306,
+			"database": "@{linkedService().dbName}",
+			"username": "@{linkedService().userName}",
+			"sslMode": 1,
+			"useSystemTrustStore": 0,
+			"password": "@{linkedService().password}",
+			"driverVersion": "v2"
+		}
+	}
+}

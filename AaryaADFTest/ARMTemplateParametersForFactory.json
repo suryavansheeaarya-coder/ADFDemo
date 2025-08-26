@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "AaryaADFTest"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"Linkedservice_forDemo_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://aaryadev.dfs.core.windows.net/"
+		},
+		"Linkedservice_forDemo_properties_typeProperties_url": {
+			"value": "https://aaryadev.dfs.core.windows.net/"
+		},
+		"MySqlParameterized_properties_typeProperties_server": {
+			"value": "@{linkedService().serverName}"
+		},
+		"MySqlParameterized_properties_typeProperties_database": {
+			"value": "@{linkedService().dbName}"
+		},
+		"MySqlParameterized_properties_typeProperties_username": {
+			"value": "@{linkedService().userName}"
+		}
+	}
+}
